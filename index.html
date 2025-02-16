@@ -3,13 +3,52 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link href="./style.css" rel="stylesheet" />
 </head>
 
 <body>
-    <h1>Hello World</h1>
-    <h1>Hello , Talha</h1>
+    <header>
+        <div class="head1">
+            <div class="logo-container">
+                <img class="logo-img" src="phil-pallen-logo.png" />
+            </div>
+            <div class="nav-container">
+                <div class="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="nav-links">
+                    <a href="#services">SERVICES</a>
+                    <a href="#book">BOOK</a>
+                    <a href="#brandmasters">BRANDMASTERS</a>
+                    <a href="#tools">TOOLS</a>
+                    <a href="#partnerships">PARTNERSHIPS</a>
+                    <a href="#blog">BLOG</a>
+                </ul>
+            </div>
+        </div>
+        <div class="head2">
+            <div class="image-content">
+                <h2 class="image-subtitle">Personal Branding Agency</h2>
+                <h1 class="image-title">
+                    Master your <br />
+                    first impression.
+                </h1>
+            </div>
+            <img class="second-img" src="phil-pallen-personal-branding-home.jpg" />
+        </div>
+    </header>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
 </body>
 
 </html>

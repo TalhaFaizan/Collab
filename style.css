@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    background: #ffffff;
+}
+
+header {
+    height:380px;
+    width: 100vw;
+    background-color: #2c2926;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+}
+
+.head1{
+width:1200px;
+    border: 1px solid #d2a899;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    justify-content: center;
+}
+.head2{
+    border-left: 1px solid #d2a899;
+    border-right: 1px solid #d2a899;
+    width:1200px;
+    height: 100%;
+    padding: 4%;
+    display: flex;
+
+
+}
+
+.image-content {
+    position: absolute;
+    top: 80%;
+    left: 10%; /* Adjust this value to move left/right */
+    transform: translateY(-50%);
+    text-align: left; /* Changed from center */
+    z-index: 2;
+    width: 60%; /* Control text width */
+    padding: 20px;
+}
+
+.image-title {
+    color: white;
+    font-size: 3rem;
+    line-height: 1.1;
+    max-width: 500px; /* Forces line break */
+    word-break: keep-all;
+}
+.image-subtitle {
+    color: #fff;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.second-img{
+    width: 80vw;
+    height: 80vh;
+object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.logo-container {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px; /* Added padding */
+    position: relative; /* For absolute positioning if needed */
+    align-items: flex-start; /* Align items to left */
+    justify-content: flex-start; /* Align content to top */
+    width: 100%; /* Ensure full width */
+}
+
+.logo-img {
+    width: 200px; /* More reasonable size */
+    max-width: 80%; /* Prevent overflow */
+    padding: 15px; /* Logo-specific padding */
+    margin: 10px 0 0 20px; /* Top and left spacing */
+    filter: 
+        brightness(0) 
+        saturate(100%) 
+        invert(85%) 
+        sepia(12%) 
+        saturate(614%) 
+        hue-rotate(317deg) 
+        brightness(95%) 
+        contrast(92%);
+}
+.nav-container{
+
+    height: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: space-between;
+    gap: 8rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #7a5c48;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background: #4e3629;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    /* Add these changes */
+ .logo-container {
+        padding: 15px;
+        height: 120px;
+    }
+    
+    .logo-img {
+        width: 150px;
+        margin: 5px 0 0 10px;
+        padding: 10px;
+    }
+    .hamburger {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        height: 100vh;
+        gap: 0;
+        flex-direction: column;
+        background: #2c2926;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        padding: 80px 0 20px;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        padding: 1.5rem 0;
+    }
+
+    /* Adjust header height for mobile */
+    header {
+        height: auto;
+        padding: 20px;
+    }
+
+    .head1, .head2 {
+        width: 100%;
+        border: none;
+        height: auto;
+    }
+
+    .logo-img {
+        width: 50%; /* Larger logo on mobile */
+    }
+
+    .nav-container {
+        position: static;
+        height: auto;
+        border: none;
+    }
+.head2 {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+ .image-content {
+        left: 10%;
+        width: 80%;
+        padding: 2rem 1rem;
+    }
+
+    .image-title {
+        font-size: 2rem;
+        max-width: 300px;
+    }
+
+       .image-subtitle {
+        font-size: 1.2rem;
+    }
+    .second-img {
+        order: 2;
+        height: 300px;
+        width: 100%;
+    }
+}
+
