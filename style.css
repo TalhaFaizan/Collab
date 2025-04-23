@@ -86,9 +86,9 @@ a:hover {
   .search-box:focus {
     outline: black;
   }
-  .cart {
+  .cart-icon {
     cursor: pointer;
-    font-size: 25px;
+    font-size: 20px;
   }
   .search-wrapper {
     display: flex;
