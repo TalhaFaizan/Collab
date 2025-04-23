@@ -81,5 +81,5 @@ a:hover {
   }
 
   .search-box:focus {
-    outline: none;
+    outline: black;
   }
