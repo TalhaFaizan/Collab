@@ -19,6 +19,11 @@
     position: absolute;
     width: 100vw;
 }
+.headleft{
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
 .logo {
     font-size: 50px;
     font-weight:bold
@@ -26,6 +31,7 @@
 .headmiddle {
     display: flex;
     justify-content: space-evenly;
+    flex: 2;
 }
 ul{
     display: flex;
@@ -53,6 +59,8 @@ a:hover {
     display: flex;
     align-items: center;
     position: relative;
+    flex: 1;
+    justify-content: flex-end;
   }
 
   .search-box {
@@ -65,14 +73,16 @@ a:hover {
     background: white;
     color: #000;
     transition: width 0.5s ease, opacity 0.5s ease;
+    cursor: pointer;
     margin-left: 0;
   }
 
-  .headright:hover .search-box {
-    width: 150px;
+  /* .headright:hover .search-box {
+    /* width: 150px;
     opacity: 1;
     margin-left: 10px;
-  }
+    border: 1px solid black;
+  } */ 
 
   .search-icon {
     font-size: 20px;
@@ -83,3 +93,20 @@ a:hover {
   .search-box:focus {
     outline: none;
   }
+  .cart {
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .search-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .search-wrapper:hover .search-box {
+    width: 150px;
+    opacity: 1;
+    margin-left: 10px;
+    border: 1px solid black;
+  }
+  
