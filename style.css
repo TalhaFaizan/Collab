@@ -77,13 +77,6 @@ a:hover {
     margin-left: 0;
   }
 
-  /* .headright:hover .search-box {
-    /* width: 150px;
-    opacity: 1;
-    margin-left: 10px;
-    border: 1px solid black;
-  } */ 
-
   .search-icon {
     font-size: 20px;
     color: white;
@@ -91,7 +84,7 @@ a:hover {
   }
 
   .search-box:focus {
-    outline: none;
+    outline: black;
   }
   .cart {
     cursor: pointer;
@@ -109,4 +102,3 @@ a:hover {
     margin-left: 10px;
     border: 1px solid black;
   }
-  
