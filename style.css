@@ -10,13 +10,13 @@
 }
 
 body {
-    background: #114;
+    background: #fff;
 }
 
 header {
     top: 0;
     width: 100%;
-    background: #bf0;
+    background: #18230f;
     display: flex;
 }
 
@@ -25,6 +25,7 @@ header .logo {
     justify-content: center;
     align-items: center;
     margin-left: 30%;
+    color: goldenrod;
 }
 
 .toggle-side-bar {
@@ -47,7 +48,7 @@ header .logo {
 .main .side-bar {
     min-height: 100vh;
     width: 30%;
-    background: #000;
+    background: #18230f;
     opacity: 0;
     display: none;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
@@ -61,7 +62,7 @@ header .logo {
     opacity: 1;
     transition: all 5s ease-in;
     display: block;
-  transform: translateX(0);
+    transform: translateX(0);
 }
 
 .side-bar ul {
@@ -90,20 +91,20 @@ li>button.li-item {
 
 li:hover,
 li.active {
-    background: #bf0;
+    background: #27391c;
     color: #232634;
     transform: translateY(-2px) scale(1.05);
 }
 
 li:hover>button,
 li.active>button {
-    color: #232634;
+    color: #fff;
 
 }
 
 .main section {
     width: 100%;
-    background: #000;
+    background: #255f38;
     border-radius: 12px;
     padding: 2rem;
     margin: 1rem;
@@ -111,9 +112,11 @@ li.active>button {
     opacity: 0;
     color: #fff;
 }
-.main section.active-sec{
-opacity: 1;
-position: static;
+
+.main section.active-sec {
+    opacity: 1;
+    /* background-image: url('https://www.freepik.com/vectors/building-png'); */
+    position: static;
 }
 
 
@@ -148,37 +151,44 @@ form button:hover {
 }
 
 .styled-table {
-  border-collapse: collapse;
-  margin: 25px 0;
-  font-size: 1rem;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  min-width: 600px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.08);
-  background: #fff;
-  border-radius: 8px;
-  overflow: hidden;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-width: 600px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
 }
+
 .styled-table thead tr {
-  background-color: #114;
-  color: #fff;
-  text-align: left;
+    background-color: #114;
+    color: #fff;
+    text-align: left;
 }
+
 .styled-table th,
 .styled-table td {
-  padding: 14px 18px;
+    padding: 14px 18px;
 }
+
 .styled-table tbody tr {
-  border-bottom: 1px solid #e3e3e3;
-  transition: background 0.2s;
-  color: #000;
+    border-bottom: 1px solid #e3e3e3;
+    transition: background 0.2s;
+    color: #000;
 }
+
 .styled-table tbody tr:nth-of-type(even) {
-  background-color: #f5f6fa;
+    background-color: #f5f6fa;
 }
+
 .styled-table tbody tr:hover {
-  background-color: #e0e7ff;
+    background-color: #e0e7ff;
 }
+
 .styled-table tbody tr:last-of-type {
-  border-bottom: 2px solid #114;
+    border-bottom: 2px solid #114;
 }
+
 /* ...existing code... */
