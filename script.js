@@ -1,31 +1,29 @@
 toggle.onclick = function () {
   sideBar.classList.toggle("active");
-  toggle.innerText = toggle.innerText == `=` ? "||" : "=";
+  toggle.innerText = toggle.innerText == `=` ? "X" : "=";
 };
 
+dashboardNavBtn.onclick = function () {
+  setLiActive(dashboardLi);
+  showSec(dashboardSec);
+};
+customersNavBtn.onclick = function () {
+  setLiActive(customersLi);
+  showSec(customersSec);
+};
 
-dashboardNavBtn.onclick=function(){
-    setLiActive(dashboardLi)
-    showSec(dashboardSec)
-}
-customersNavBtn.onclick = function(){
-    setLiActive(customersLi)
-    showSec(customersSec)
-}
-
-apartmentsNavBtn.onclick = function(){
-    setLiActive(apartmentsLi)
-    showSec(apartmentsSec)
-}
-bookingsNavBtn.onclick = function(){
-    setLiActive(bookingsLi)
-    showSec(bookingsSec)
-}
-installmentsNavBtn.onclick = function(){
-    setLiActive(installmentsLi)
-    showSec(installmentsSec)
-}
-
+apartmentsNavBtn.onclick = function () {
+  setLiActive(apartmentsLi);
+  showSec(apartmentsSec);
+};
+bookingsNavBtn.onclick = function () {
+  setLiActive(bookingsLi);
+  showSec(bookingsSec);
+};
+installmentsNavBtn.onclick = function () {
+  setLiActive(installmentsLi);
+  showSec(installmentsSec);
+};
 
 const setLiActive = (navID) => {
   document.querySelectorAll(".side-bar ul li").forEach((l) => {
@@ -34,7 +32,6 @@ const setLiActive = (navID) => {
     setTimeout(navID.classList.add("active"), 50);
   });
 };
-
 
 const showSec = (secID) => {
   document.querySelectorAll(".main section").forEach((s) => {
@@ -47,3 +44,9 @@ const showSec = (secID) => {
     }, 50);
   });
 };
+
+fetch("http://localhost:8080/table/customers")
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data);
+  });

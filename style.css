@@ -16,7 +16,7 @@ body {
 header {
     top: 0;
     width: 100%;
-    background: #18230f;
+    background: #111;
     display: flex;
 }
 
@@ -25,13 +25,13 @@ header .logo {
     justify-content: center;
     align-items: center;
     margin-left: 30%;
-    color: goldenrod;
+    color: #fff;
 }
 
 .toggle-side-bar {
     border: none;
     background: none;
-    color: #114;
+    color: #fff;
     padding: 0.5rem;
     font-size: 2rem;
     cursor: pointer;
@@ -48,7 +48,7 @@ header .logo {
 .main .side-bar {
     min-height: 100vh;
     width: 30%;
-    background: #18230f;
+    background: #000;
     opacity: 0;
     display: none;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
@@ -75,7 +75,7 @@ li {
     list-style: none;
     border-radius: 12px;
     /* width: 100%; */
-    border: 2px solid #bf0;
+    border: 2px solid #fff;
     margin: 1rem 0.5rem;
 }
 
@@ -84,21 +84,21 @@ li>button.li-item {
     background: none;
     padding: 1rem;
     width: 100%;
-    color: #bf0;
+    color: #fff;
     font-weight: 600;
     cursor: pointer;
 }
 
 li:hover,
 li.active {
-    background: #27391c;
-    color: #232634;
+    background: #fff;
+    color: #000;
     transform: translateY(-2px) scale(1.05);
 }
 
 li:hover>button,
 li.active>button {
-    color: #fff;
+    color: #000;
 
 }
 
@@ -191,4 +191,11 @@ form button:hover {
     border-bottom: 2px solid #114;
 }
 
-/* ...existing code... */
+
+.search-bar {
+
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+}

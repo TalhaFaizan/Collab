@@ -11,7 +11,7 @@
       <button class="toggle-side-bar" id="toggle">=</button>
       <div class="logo">
         <svg
-          fill="#daa520"
+          fill="#fff"
           height="80px"
           width="80px"
           version="1.1"
@@ -90,14 +90,38 @@
       <section class="customers active-sec" id="customersSec">
         <h1>Customers</h1>
         <form id="customerForm">
-          <input type="text" placeholder="first name" id="firstNameInput" />
-          <input type="text" placeholder="last name" id="lastNameInput" />
-          <input type="email" placeholder="email" id="emailInput" />
-          <input type="number" placeholder="contact" id="contactInput" />
-          <input type="number" placeholder="nic" id="nicInput" /> </br>
+          <input
+            type="text"
+            placeholder="first name"
+            id="firstNameInput"
+            required
+          />
+          <input
+            type="text"
+            placeholder="last name"
+            id="lastNameInput"
+            required
+          />
+          <input type="email" placeholder="email" id="emailInput" required />
+          <input
+            type="number"
+            placeholder="contact"
+            id="contactInput"
+            required
+          />
+          <input type="number" placeholder="nic" id="nicInput" required />
+          <br />
           <button type="submit">Add Customer</button>
         </form>
         <h2>View Customers</h2>
+        <div class="customerSearchInput">
+          <input
+            type="text"
+            placeholder="Search ..."
+            id="customerSearchInput"
+            class="search-bar"
+          />
+        </div>
         <table class="styled-table">
           <thead>
             <tr>
@@ -110,22 +134,22 @@
             </tr>
           </thead>
           <tbody id="customerBody">
-              <tr>
-                <td>bob</td>
-                <td>jade</td>
-                <td>bob@gmail</td>
-                <td>0929829</td>
-                <td>323u2w32</td>
-                <td>18-05-25 10:00</td>
-              </tr>
-              <tr>
-                <td>bob</td>
-                <td>jade</td>
-                <td>bob@gmail</td>
-                <td>0929829</td>
-                <td>323u2w32</td>
-                <td>18-05-25 10:00</td>
-              </tr>
+            <tr>
+              <td>bob</td>
+              <td>jade</td>
+              <td>bob@gmail</td>
+              <td>0929829</td>
+              <td>323u2w32</td>
+              <td>18-05-25 10:00</td>
+            </tr>
+            <tr>
+              <td>bob</td>
+              <td>jade</td>
+              <td>bob@gmail</td>
+              <td>0929829</td>
+              <td>323u2w32</td>
+              <td>18-05-25 10:00</td>
+            </tr>
           </tbody>
         </table>
       </section>
@@ -139,6 +163,12 @@
           <button type="submit">Add Apartment</button>
         </form>
         <h2>View Apartments</h2>
+        <input
+          type="text"
+          placeholder="Search ..."
+          id="apartmentSearchInput"
+          class="search-bar"
+        />
         <table class="styled-table">
           <thead>
             <tr>
@@ -152,24 +182,24 @@
             </tr>
           </thead>
           <tbody id="apartmentsBody">
-              <tr>
-                <td>bob</td>
-                <td>jade</td>
-                <td>bob@gmail</td>
-                <td>0929829</td>
-                <td>323u2w32</td>
-                <td></td>
-                <td>18-05-25 10:00</td>
-              </tr>
-              <tr>
-                <td>bob</td>
-                <td>jade</td>
-                <td>bob@gmail</td>
-                <td>0929829</td>
-                <td>323u2w32</td>
-                <td></td>
-                <td>18-05-25 10:00</td>
-              </tr>
+            <tr>
+              <td>bob</td>
+              <td>jade</td>
+              <td>bob@gmail</td>
+              <td>0929829</td>
+              <td>323u2w32</td>
+              <td></td>
+              <td>18-05-25 10:00</td>
+            </tr>
+            <tr>
+              <td>bob</td>
+              <td>jade</td>
+              <td>bob@gmail</td>
+              <td>0929829</td>
+              <td>323u2w32</td>
+              <td></td>
+              <td>18-05-25 10:00</td>
+            </tr>
           </tbody>
         </table>
       </section>
@@ -184,6 +214,12 @@
           <button type="submit">Add Apartment</button>
         </form>
         <h2>View Bookings</h2>
+        <input
+          type="text"
+          placeholder="Search ..."
+          id="bookingSearchInput"
+          class="search-bar"
+        />
         <table class="styled-table">
           <thead>
             <tr>
@@ -195,24 +231,71 @@
             </tr>
           </thead>
           <tbody id="bookingsBody">
-              <tr>
-                <td>bob</td>
-                <td>jade</td>
-                <td>bob@gmail</td>
-                <td></td>
-                <td>18-05-25 10:00</td>
-              </tr>
-              <tr>
-                <td>bob</td>
-                <td>jade</td>
-                <td>bob@gmail</td>
-                <td>323u2w32</td>
-                <td>18-05-25 10:00</td>
-              </tr>
+            <tr>
+              <td>bob</td>
+              <td>jade</td>
+              <td>bob@gmail</td>
+              <td></td>
+              <td>18-05-25 10:00</td>
+            </tr>
+            <tr>
+              <td>bob</td>
+              <td>jade</td>
+              <td>bob@gmail</td>
+              <td>323u2w32</td>
+              <td>18-05-25 10:00</td>
+            </tr>
           </tbody>
         </table>
       </section>
-      <section class="installments" id="installmentsSec">khkhxkhk</section>
+      <section class="installments" id="installmentsSec">
+        <h1>Installments</h1>
+        <form id="installmentForm">
+          <input type="text" placeholder="Booking ID" id="bookingIdInput" />
+          <input
+            type="text"
+            placeholder="Installment Number"
+            id="installmentNumberInput"
+          />
+          <input type="text" placeholder="Amount" id="amountInput" />
+          <input type="date" placeholder="Due Date" id="dueDateInput" />
+          <button type="submit">Add Installments</button>
+        </form>
+        <h2>View Installments</h2>
+        <input
+          type="text"
+          placeholder="Search ..."
+          id="installmentSearchInput"
+          class="search-bar"
+        />
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Customer ID</th>
+              <th>Customer Name</th>
+              <th>Apartment ID</th>
+              <th>Down Payment</th>
+              <th>Created at</th>
+            </tr>
+          </thead>
+          <tbody id="bookingsBody">
+            <tr>
+              <td>bob</td>
+              <td>jade</td>
+              <td>bob@gmail</td>
+              <td></td>
+              <td>18-05-25 10:00</td>
+            </tr>
+            <tr>
+              <td>bob</td>
+              <td>jade</td>
+              <td>bob@gmail</td>
+              <td>323u2w32</td>
+              <td>18-05-25 10:00</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
     </div>
     <script src="script.js"></script>
   </body>
